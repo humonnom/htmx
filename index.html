@@ -1,0 +1,26 @@
+<html lang="">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://unpkg.com/htmx.org@0.0.8"></script>
+    <script>
+        function closeModal() {
+            var container = document.getElementById("modal-position")
+            var modal = document.getElementById("modal")
+            modal.classList.remove("show")
+            setTimeout(function() {
+                container.removeChild(modal)
+            }, 200)
+        }
+    </script>
+    <title></title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Test</h1>
+    <button hx-get="src/modal.html" hx-target="#modal-position" class="btn btn-primary">Open Modal</button>
+</div>
+
+<div id="modal-position"></div>
+</body>
+</html>
